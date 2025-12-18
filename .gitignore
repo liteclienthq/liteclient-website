@@ -8,6 +8,4 @@ ehthumbs.db
 Thumbs.db
 
 # Project-specific ignored files
-/assets/hero-placeholder.webp
-/assets/hero-mockup.png
 /hero_screenshot_mockup*.png

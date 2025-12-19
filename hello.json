@@ -1,0 +1,11 @@
+{
+    "hello": "from LiteClient ⚡️",
+    "philosophy": "No accounts. No telemetry. No cloud bloat.",
+    "status": "Ready to test APIs.",
+    "guides": {
+        "step_1": "Enter URL above",
+        "step_2": "Choose Method",
+        "step_3": "Press Send"
+    },
+    "tip": "Environment variables: Use {{variable_name}} syntax."
+}

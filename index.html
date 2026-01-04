@@ -4,44 +4,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LiteClient | Fast, native REST API client for VS Code</title>
+    <title>LiteClient | Fast, Private, Native REST API Client</title>
     <meta name="description"
-        content="No accounts, no bloat, privacy-first. The lightweight REST API client built specifically for VS Code.">
+        content="The fastest, most focused REST API client for modern code editors. No accounts, no bloat, zero telemetry. High performance by design.">
+    <link rel="icon" type="image/png" href="media/logo.png">
+
+    <!-- SEO & Social -->
+    <meta property="og:title" content="LiteClient | API Testing, Simplified.">
+    <meta property="og:description"
+        content="Native, high-performance REST API client for VS Code, Cursor, and Antigravity.">
+    <meta property="og:image" content="media/screenshot.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <main class="one-pager">
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌓</button>
-        <div class="content">
-            <header>
-                <div class="logo">⚡ LiteClient</div>
-            </header>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌓</button>
 
-            <section class="hero">
-                <h1>API Testing, Simplified.</h1>
-                <p>Fast, native, and privacy-first. A REST API client for VS Code that stays out of your way.</p>
-
-                <div class="actions">
-                    <a href="https://marketplace.visualstudio.com/items?itemName=liteclienthq.liteclient" target="_blank"
-                        class="btn">Install for VS Code</a>
-                    <a href="https://github.com/liteclienthq/liteclient-issues" target="_blank"
-                        class="btn btn-outline">GitHub</a>
-                </div>
-            </section>
-
-            <section class="features-lite">
-                <span>No Accounts</span> • <span>No Tracking</span> • <span>No Bloat</span>
-            </section>
-
-            <footer>
-                <p>Local-first storage. Zero telemetry. Privacy by design.</p>
-            </footer>
+    <nav class="container">
+        <div class="logo">
+            <img src="media/logo.png" alt="LiteClient Logo" width="32" height="32">
+            <span>LiteClient</span>
         </div>
+        <div class="nav-links">
+            <a href="https://github.com/liteclienthq/liteclient" target="_blank">GitHub</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero container">
+            <div class="hero-content">
+                <span class="badge">Version 0.3.0 Available Now</span>
+                <h1>API Testing <span class="text-gradient">Redefined.</span></h1>
+                <p>The fastest, most focused REST API client for developers who value performance and privacy. Built
+                    natively for your workspace.</p>
+
+                <div class="cta-group">
+                    <a href="https://marketplace.visualstudio.com/items?itemName=liteclienthq.liteclient"
+                        target="_blank" class="btn btn-primary">
+                        VS Code Marketplace
+                    </a>
+                    <a href="https://open-vsx.org/extension/liteclienthq/liteclient" target="_blank"
+                        class="btn btn-secondary">
+                        Open VSX Registry
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-media">
+                <div class="screenshot-container">
+                    <img src="media/screenshot.png" alt="LiteClient Interface" class="hero-screenshot">
+                    <div class="glass-overlay"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pillars container">
+            <div class="pillar">
+                <div class="pillar-icon">⚡</div>
+                <h3>Blazing Fast</h3>
+                <p>Native implementation with zero startup time. It restores your workspace instantly without the bloat.
+                </p>
+            </div>
+            <div class="pillar">
+                <div class="pillar-icon">🔒</div>
+                <h3>Total Privacy</h3>
+                <p>No cloud accounts, no forced syncing, and absolutely zero telemetry. Your data stays on your machine.
+                </p>
+            </div>
+            <div class="pillar">
+                <div class="pillar-icon">🎨</div>
+                <h3>Pure Native</h3>
+                <p>Integrates seamlessly into your IDE using native components, trees, and themes for zero friction.</p>
+            </div>
+        </section>
+
+        <section class="features container">
+            <h2>Everything you need, <span class="text-muted">nothing you don't.</span></h2>
+            <div class="feature-grid">
+                <div class="feature-item">Collections Management</div>
+                <div class="feature-item">Environment Variables</div>
+                <div class="feature-item">Smart Layouts</div>
+                <div class="feature-item">Bearer & Basic Auth</div>
+                <div class="feature-item">Rich History</div>
+                <div class="feature-item">JSON & Form Data</div>
+            </div>
+        </section>
+
+        <footer class="container">
+            <div class="footer-content">
+                <p>Built with ❤️ by the LiteClient Team.</p>
+                <div class="footer-links">
+                    <a href="https://github.com/liteclienthq/liteclient/issues" target="_blank">Support</a>
+                    <a href="https://github.com/liteclienthq/liteclient" target="_blank">Repository</a>
+                </div>
+            </div>
+        </footer>
     </main>
+
     <script src="script.js"></script>
 </body>
 

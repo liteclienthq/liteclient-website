@@ -2,6 +2,8 @@
 
 The official website for LiteClient — a fast, native, and privacy-first REST API client for modern code editors.
 
+[![GitHub Stars](https://img.shields.io/github/stars/liteclienthq/liteclient?style=social)](https://github.com/liteclienthq/liteclient)
+
 ## 🚀 Vision
 LiteClient is built for developers who are tired of bloated API clients. No accounts, no telemetry, no cloud nonsense. Just a blazing fast, local-first tool that stays out of your way.
 

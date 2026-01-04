@@ -107,6 +107,37 @@ nav {
     color: var(--text);
 }
 
+.github-star-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.8rem;
+    background: var(--btn-secondary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text) !important;
+    font-size: 0.85rem !important;
+    transition: all 0.2s ease;
+}
+
+.github-star-btn:hover {
+    background: var(--border);
+    transform: translateY(-1px);
+}
+
+.star-count-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-left: 0.5rem;
+    border-left: 1px solid var(--glass-border);
+    color: var(--accent);
+}
+
+.github-icon {
+    opacity: 0.8;
+}
+
 /* Hero Section */
 .hero {
     padding: 100px 0;
@@ -240,6 +271,7 @@ nav {
 .pillar-icon {
     font-size: 2rem;
     margin-bottom: 1.5rem;
+    color: var(--accent);
 }
 
 .pillar h3 {
@@ -341,6 +373,44 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+}
+
+.theme-toggle svg {
+    position: absolute;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+[data-theme="dark"] .theme-sun {
+    transform: scale(0) rotate(90deg);
+    opacity: 0;
+}
+
+[data-theme="dark"] .theme-moon {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+}
+
+:root:not([data-theme="dark"]) .theme-sun {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+}
+
+:root:not([data-theme="dark"]) .theme-moon {
+    transform: scale(0) rotate(-90deg);
+    opacity: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .theme-sun {
+        transform: scale(0) rotate(90deg);
+        opacity: 0;
+    }
+
+    :root:not([data-theme="light"]) .theme-moon {
+        transform: scale(1) rotate(0);
+        opacity: 1;
+    }
 }
 
 .theme-toggle:hover {

@@ -1,16 +1,40 @@
-const themeToggle = document.getElementById('theme-toggle');
-const html = document.documentElement;
+const themeController = document.querySelector('.theme-controller');
 
-// Initialize theme from localStorage or system preference
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme) {
-    html.setAttribute('data-theme', savedTheme);
+// Restore checkbox state after page loads
+document.addEventListener('DOMContentLoaded', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    if (themeController) {
+        themeController.checked = currentTheme === 'dark';
+    }
+});
+
+// Listen for checkbox changes and update theme
+if (themeController) {
+    themeController.addEventListener('change', () => {
+        const newTheme = themeController.checked ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        
+        // Force Tailwind to reprocess styles
+        document.documentElement.style.colorScheme = newTheme;
+        
+        localStorage.setItem('theme', newTheme);
+        console.log('Theme changed to:', newTheme);
+    });
 }
 
-themeToggle.addEventListener('click', () => {
-    const currentTheme = html.getAttribute('data-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+// Prevent zoom on input focus on mobile
+if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+    const meta = document.querySelector('meta[name="viewport"]');
+    if (meta) {
+        meta.setAttribute('content', meta.getAttribute('content') + ', user-scalable=yes');
+    }
+}
 
-    html.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
+// Add touch-friendly features
+document.addEventListener('DOMContentLoaded', () => {
+    // Prevent default touch behavior for smooth scrolling
+    if ('ontouchstart' in window) {
+        document.documentElement.style.touchAction = 'manipulation';
+    }
 });
+

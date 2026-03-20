@@ -7,11 +7,11 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <title>LiteClient | Fast, Private, Native REST API Client</title>
+    <title>LiteClient | Fast, Private REST API Client for VS Code</title>
     <meta name="description"
-        content="The fastest, most focused REST API client for modern code editors. A lightweight Postman and Thunder Client alternative with no accounts, no bloat, zero telemetry. High performance by design.">
+        content="Fast, private REST API client for VS Code with collections, environments, scripts, tests, OAuth 2.0, cookies, and Postman import/export. No accounts, no bloat, zero telemetry.">
     <meta name="keywords"
-        content="API testing, REST client, Postman alternative, Thunder Client alternative, VS Code extension, API development, HTTP client, JSON API, REST API tool">
+        content="API testing, REST client, Postman alternative, Thunder Client alternative, VS Code extension, API development, HTTP client, JSON API, REST API tool, API scripting, Postman collections">
     <link rel="canonical" href="https://liteclient.com/">
 
     <!-- Favicon -->
@@ -20,9 +20,9 @@
     <link rel="shortcut icon" href="media/logo.png">
 
     <!-- SEO & Social -->
-    <meta property="og:title" content="LiteClient | Fast, Private REST API Client - Postman Alternative">
+    <meta property="og:title" content="LiteClient | Fast, Private REST API Client for VS Code">
     <meta property="og:description"
-        content="Native, high-performance REST API client for VS Code, Cursor, and Antigravity. Lightweight alternative to Postman and Thunder Client.">
+        content="Native REST API client for VS Code with scripts, tests, collection variables, OAuth 2.0, cookies, and Postman import/export.">
     <meta property="og:image" content="media/screenshot.png">
     <meta property="og:url" content="https://liteclient.com/">
     <meta property="og:type" content="website">
@@ -30,9 +30,9 @@
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="LiteClient | Fast, Private REST API Client - Postman Alternative">
+    <meta name="twitter:title" content="LiteClient | Fast, Private REST API Client for VS Code">
     <meta name="twitter:description"
-        content="Native, high-performance REST API client for VS Code. Lightweight alternative to Postman and Thunder Client.">
+        content="Native REST API client for VS Code with scripts, tests, environments, collection variables, and Postman import/export.">
     <meta name="twitter:image" content="media/screenshot.png">
 
     <!-- Structured Data -->
@@ -41,7 +41,7 @@
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
       "name": "LiteClient",
-      "description": "A fast, private, native REST API client for modern code editors. Lightweight alternative to Postman and Thunder Client with no accounts, no bloat, zero telemetry.",
+      "description": "A fast, private, native REST API client for VS Code with scripts, tests, variables, OAuth 2.0, cookies, and Postman import/export.",
       "url": "https://liteclient.com/",
       "applicationCategory": "DeveloperApplication",
       "operatingSystem": "Windows, macOS, Linux",
@@ -56,6 +56,11 @@
         "url": "https://github.com/liteclienthq"
       },
       "featureList": [
+        "Pre-request and post-response scripts",
+        "Built-in test results panel",
+        "Collection variables",
+        "Environment manager with current values and secrets",
+        "Response body formatting",
         "OAuth 2.0 & PKCE Support",
         "Workspace-Scoped Storage",
         "Variable Autocomplete",
@@ -159,11 +164,11 @@
         <section class="hero min-h-screen bg-base-100">
             <div class="hero-content flex-col lg:flex-row gap-8">
                 <div class="flex flex-col justify-center flex-1">
-                    <div class="badge badge-lg mb-4 w-fit">Version 0.13.0 Available Now</div>
+                    <div class="badge badge-lg mb-4 w-fit">Version 0.17.0 Available Now</div>
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">API Testing <span
                             class="text-error">Redefined.</span></h1>
-                    <p class="text-lg md:text-xl text-base-content/70 mb-8">The fastest, most focused REST API client
-                        for developers who value performance and privacy. Built natively for your workspace.</p>
+                    <p class="text-lg md:text-xl text-base-content/70 mb-8">A fast, local-first REST client for VS
+                        Code with collections, environments, scripting, tests, cookies, and Postman compatibility.</p>
 
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="https://marketplace.visualstudio.com/items?itemName=liteclienthq.liteclient"
@@ -344,69 +349,75 @@
                     <div
                         class="card bg-gradient-to-br from-base-100 to-base-200 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all">
                         <div class="card-body items-center text-center gap-4">
-                            <h3 class="card-title text-lg">OAuth 2.0 & PKCE Support</h3>
-                            <p class="text-sm text-base-content/70">Full support for Auth Code, PKCE, and Client
-                                Credentials</p>
+                            <h3 class="card-title text-lg">Scripts & Tests</h3>
+                            <p class="text-sm text-base-content/70">Run pre-request and post-response scripts with a
+                                Postman-style `pm` API and built-in test reporting</p>
+                        </div>
+                    </div>
+                    <div
+                        class="card bg-gradient-to-br from-base-100 to-base-200 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all">
+                        <div class="card-body items-center text-center gap-4">
+                            <h3 class="card-title text-lg">Environment Manager</h3>
+                            <p class="text-sm text-base-content/70">Manage initial values, current values, secrets,
+                                and enabled state in a dedicated table UI</p>
+                        </div>
+                    </div>
+                    <div
+                        class="card bg-gradient-to-br from-base-100 to-base-200 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all">
+                        <div class="card-body items-center text-center gap-4">
+                            <h3 class="card-title text-lg">Collection Variables</h3>
+                            <p class="text-sm text-base-content/70">Use collection-scoped variables with autocomplete,
+                                request metadata visibility, and Postman round-tripping
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="card bg-gradient-to-br from-base-100 to-base-200 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all">
+                        <div class="card-body items-center text-center gap-4">
+                            <h3 class="card-title text-lg">Response Formatting</h3>
+                            <p class="text-sm text-base-content/70">Pretty-print JSON, HTML, and XML responses
+                                automatically, with a manual format action when you want it</p>
+                        </div>
+                    </div>
+                    <div
+                        class="card bg-gradient-to-br from-base-100 to-base-200 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all">
+                        <div class="card-body items-center text-center gap-4">
+                            <h3 class="card-title text-lg">OAuth 2.0 & PKCE</h3>
+                            <p class="text-sm text-base-content/70">Support for Auth Code, PKCE, and Client
+                                Credentials with token caching and refresh
+                            </p>
                         </div>
                     </div>
                     <div
                         class="card bg-gradient-to-br from-base-100 to-base-200 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all">
                         <div class="card-body items-center text-center gap-4">
                             <h3 class="card-title text-lg">Workspace Storage</h3>
-                            <p class="text-sm text-base-content/70">Sync collections via Git in a local .liteclient
-                                folder</p>
+                            <p class="text-sm text-base-content/70">Store collections, environments, and history in
+                                `.liteclient/` for Git-friendly team workflows</p>
                         </div>
                     </div>
                     <div
                         class="card bg-gradient-to-br from-base-100 to-base-200 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all">
                         <div class="card-body items-center text-center gap-4">
                             <h3 class="card-title text-lg">Variable Autocomplete</h3>
-                            <p class="text-sm text-base-content/70">Trigger instant suggestions with `{{` in any field
-                            </p>
+                            <p class="text-sm text-base-content/70">Trigger suggestions with `{{` in URLs, headers,
+                                params, and request bodies</p>
                         </div>
                     </div>
                     <div
                         class="card bg-gradient-to-br from-base-100 to-base-200 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all">
                         <div class="card-body items-center text-center gap-4">
-                            <h3 class="card-title text-lg">Cookie Management</h3>
-                            <p class="text-sm text-base-content/70">Automatic cookie persistence and per-domain
-                                management</p>
-                        </div>
-                    </div>
-                    <div
-                        class="card bg-gradient-to-br from-base-100 to-base-200 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all">
-                        <div class="card-body items-center text-center gap-4">
-                            <h3 class="card-title text-lg">File Upload Support</h3>
-                            <p class="text-sm text-base-content/70">Native file picker for multipart/form-data requests
-                            </p>
+                            <h3 class="card-title text-lg">Cookies & History</h3>
+                            <p class="text-sm text-base-content/70">Persist per-domain cookies and keep an immutable
+                                execution ledger for replay and debugging</p>
                         </div>
                     </div>
                     <div
                         class="card bg-gradient-to-br from-base-100 to-base-200 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all">
                         <div class="card-body items-center text-center gap-4">
                             <h3 class="card-title text-lg">Postman Import/Export</h3>
-                            <p class="text-sm text-base-content/70">Seamlessly migrate from Postman collections</p>
-                        </div>
-                    </div>
-                    <div
-                        class="card bg-gradient-to-br from-base-100 to-base-200 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all">
-                        <div class="card-body items-center text-center gap-4">
-                            <h3 class="card-title text-lg">Drag-and-Drop Reordering</h3>
-                            <p class="text-sm text-base-content/70">Reorganize requests and folders with ease</p>
-                        </div>
-                    </div>
-                    <div
-                        class="card bg-gradient-to-br from-base-100 to-base-200 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all">
-                        <div class="card-body items-center text-center gap-4">
-                            <h3 class="card-title text-lg">Collections & History</h3>
-                            <p class="text-sm text-base-content/70">Organize endpoints and browse all past activity</p>
-                        </div>
-                    </div>
-                    <div
-                        class="card bg-gradient-to-br from-base-100 to-base-200 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all">
-                        <div class="card-body items-center text-center gap-4">
-                            <h3 class="card-title text-lg">Environment Variables</h3>
-                            <p class="text-sm text-base-content/70">Manage variables across multiple environments</p>
+                            <p class="text-sm text-base-content/70">Bring over requests, auth, variables, and scripts
+                                without rebuilding collections by hand</p>
                         </div>
                     </div>
                 </div>

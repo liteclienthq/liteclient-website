@@ -7,11 +7,11 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <title>LiteClient | Fast, Private REST API Client for VS Code</title>
+    <title>LiteClient | VS Code REST API Client, Postman & Thunder Client Alternative</title>
     <meta name="description"
-        content="Fast, private REST API client for VS Code with collections, environments, scripts, tests, OAuth 2.0, cookies, and Postman import/export. No accounts, no bloat, zero telemetry.">
+        content="LiteClient is a fast, private REST API client for VS Code and a Postman and Thunder Client alternative with collection runner, scripts, tests, OAuth 2.0, cookies, environments, and Postman import/export.">
     <meta name="keywords"
-        content="API testing, REST client, Postman alternative, Thunder Client alternative, VS Code extension, API development, HTTP client, JSON API, REST API tool, API scripting, Postman collections">
+        content="LiteClient, VS Code REST client, VS Code API client, Postman alternative, Thunder Client alternative, API testing, HTTP client, REST client, API scripting, OAuth 2.0, Postman collections">
     <link rel="canonical" href="https://liteclient.com/">
 
     <!-- Favicon -->
@@ -20,9 +20,9 @@
     <link rel="shortcut icon" href="media/logo.png">
 
     <!-- SEO & Social -->
-    <meta property="og:title" content="LiteClient | Fast, Private REST API Client for VS Code">
+    <meta property="og:title" content="LiteClient | VS Code REST API Client, Postman & Thunder Client Alternative">
     <meta property="og:description"
-        content="Native REST API client for VS Code with scripts, tests, collection variables, OAuth 2.0, cookies, and Postman import/export.">
+        content="Native REST API client for VS Code and a Postman and Thunder Client alternative with collection runner, scripts, tests, collection variables, OAuth 2.0, cookies, and Postman import/export.">
     <meta property="og:image" content="media/screenshot.png">
     <meta property="og:url" content="https://liteclient.com/">
     <meta property="og:type" content="website">
@@ -30,9 +30,9 @@
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="LiteClient | Fast, Private REST API Client for VS Code">
+    <meta name="twitter:title" content="LiteClient | VS Code REST API Client, Postman & Thunder Client Alternative">
     <meta name="twitter:description"
-        content="Native REST API client for VS Code with scripts, tests, environments, collection variables, and Postman import/export.">
+        content="Native REST API client for VS Code and a Postman and Thunder Client alternative with collection runner, scripts, tests, environments, collection variables, and Postman import/export.">
     <meta name="twitter:image" content="media/screenshot.png">
 
     <!-- Structured Data -->
@@ -41,10 +41,18 @@
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
       "name": "LiteClient",
-      "description": "A fast, private, native REST API client for VS Code with scripts, tests, variables, OAuth 2.0, cookies, and Postman import/export.",
+      "description": "A fast, private, native REST API client for VS Code and a Postman and Thunder Client alternative with collection runner, scripts, tests, variables, OAuth 2.0, cookies, and Postman import/export.",
       "url": "https://liteclient.com/",
       "applicationCategory": "DeveloperApplication",
+      "applicationSubCategory": "API Client",
       "operatingSystem": "Windows, macOS, Linux",
+      "softwareVersion": "0.18.0",
+      "downloadUrl": "https://marketplace.visualstudio.com/items?itemName=liteclienthq.liteclient",
+      "sameAs": [
+        "https://github.com/liteclienthq/liteclient",
+        "https://docs.liteclient.com/",
+        "https://open-vsx.org/extension/liteclienthq/liteclient"
+      ],
       "offers": {
         "@type": "Offer",
         "price": "0",
@@ -58,6 +66,7 @@
       "featureList": [
         "Pre-request and post-response scripts",
         "Built-in test results panel",
+        "Collection runner with real-time results",
         "Collection variables",
         "Environment manager with current values and secrets",
         "Response body formatting",
@@ -72,6 +81,46 @@
         "Environment Variables"
       ],
       "screenshot": "https://liteclient.com/media/screenshot.png"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is LiteClient a Postman alternative for VS Code?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. LiteClient is a local-first REST API client for VS Code with collections, environments, scripts, tests, OAuth 2.0, cookies, history, and Postman collection import and export."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is LiteClient a Thunder Client alternative?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. LiteClient offers a native VS Code workflow with local storage, collection runner support, scripting, test results, cookies, OAuth 2.0, and Postman compatibility."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does LiteClient store API data locally?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. LiteClient is local-first. Collections, environments, history, and cookies stay on your machine, with optional workspace storage in a .liteclient folder."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can LiteClient import Postman collections?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. LiteClient supports Postman Collection v2.1 import and export, including requests, authentication, variables, and scripts."
+          }
+        }
+      ]
     }
     </script>
 
@@ -115,16 +164,24 @@
 
 <body>
 
-    <nav class="sticky top-0 z-40 navbar bg-base-100/80 backdrop-blur-md border-b border-base-300">
+    <nav class="sticky top-0 z-40 navbar px-4 py-2 bg-base-100/80 backdrop-blur-md border-b border-base-300">
         <div class="navbar-start">
-            <a href="/" class="flex items-center gap-3 text-xl font-bold">
+            <a href="/" class="flex items-center gap-3 text-lg sm:text-xl font-bold">
                 <img src="media/logo.png" alt="LiteClient Logo" width="32" height="32" class="rounded-full">
                 <span>LiteClient</span>
             </a>
         </div>
-        <div class="navbar-end gap-2">
+        <div class="navbar-end hidden md:flex gap-2">
             <a href="https://docs.liteclient.com/" class="btn btn-sm btn-ghost">
                 Docs
+            </a>
+            <a href="https://github.com/liteclienthq/liteclient/blob/main/CHANGELOG.md" target="_blank"
+                class="btn btn-sm btn-ghost" rel="noopener noreferrer">
+                Changelog
+            </a>
+            <a href="https://github.com/liteclienthq/liteclient/releases" target="_blank" class="btn btn-sm btn-ghost"
+                rel="noopener noreferrer">
+                Releases
             </a>
             <a href="https://github.com/liteclienthq/liteclient" target="_blank" class="btn btn-sm btn-ghost gap-2"
                 rel="noopener noreferrer">
@@ -161,32 +218,86 @@
                 </svg>
             </label>
         </div>
+        <div class="navbar-end md:hidden gap-2">
+            <label class="toggle text-base-content">
+                <input type="checkbox" value="dark" class="theme-controller" />
+                <svg aria-label="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none"
+                        stroke="currentColor">
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="M12 2v2"></path>
+                        <path d="M12 20v2"></path>
+                        <path d="m4.93 4.93 1.41 1.41"></path>
+                        <path d="m17.66 17.66 1.41 1.41"></path>
+                        <path d="M2 12h2"></path>
+                        <path d="M20 12h2"></path>
+                        <path d="m6.34 17.66-1.41 1.41"></path>
+                        <path d="m19.07 4.93-1.41 1.41"></path>
+                    </g>
+                </svg>
+                <svg aria-label="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none"
+                        stroke="currentColor">
+                        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                    </g>
+                </svg>
+            </label>
+            <div class="dropdown dropdown-end">
+                <div tabindex="0" role="button" class="btn btn-sm btn-ghost" aria-label="Open navigation menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        aria-hidden="true">
+                        <line x1="4" x2="20" y1="12" y2="12"></line>
+                        <line x1="4" x2="20" y1="6" y2="6"></line>
+                        <line x1="4" x2="20" y1="18" y2="18"></line>
+                    </svg>
+                </div>
+                <ul tabindex="0"
+                    class="menu menu-sm dropdown-content mt-3 z-[60] w-56 rounded-box border border-base-300 bg-base-100 p-2 shadow-xl">
+                    <li><a href="https://docs.liteclient.com/">Docs</a></li>
+                    <li><a href="https://github.com/liteclienthq/liteclient/blob/main/CHANGELOG.md" target="_blank"
+                            rel="noopener noreferrer">Changelog</a></li>
+                    <li><a href="https://github.com/liteclienthq/liteclient/releases" target="_blank"
+                            rel="noopener noreferrer">Releases</a></li>
+                    <li><a href="https://github.com/liteclienthq/liteclient" target="_blank"
+                            rel="noopener noreferrer">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
     <main>
         <section class="hero min-h-screen bg-base-100">
-            <div class="hero-content flex-col lg:flex-row gap-8">
-                <div class="flex flex-col justify-center flex-1">
-                    <div class="badge badge-lg mb-4 w-fit">Version 0.17.0 Available Now</div>
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">API Testing <span
-                            class="text-error">Redefined.</span></h1>
+            <div class="hero-content w-full max-w-6xl px-4 py-12 sm:py-16 flex-col lg:flex-row gap-10 lg:gap-12">
+                <div class="flex flex-col justify-center flex-1 text-center lg:text-left">
+                    <div class="badge badge-lg mb-4 w-fit self-center lg:self-start">Now shipping v0.18.0</div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">Fast REST API Client
+                        <span class="text-error">for VS Code.</span></h1>
                     <p class="text-lg md:text-xl text-base-content/70 mb-8">A fast, local-first REST client for VS
-                        Code with collections, environments, scripting, tests, cookies, and Postman compatibility.</p>
+                        Code and a focused alternative to Postman and Thunder Client, with collection runner,
+                        scripting, tests, cookies, environments, and Postman compatibility.</p>
 
-                    <div class="flex flex-col sm:flex-row gap-4">
+                    <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                         <a href="https://marketplace.visualstudio.com/items?itemName=liteclienthq.liteclient"
-                            target="_blank" class="btn btn-error btn-lg">
+                            target="_blank" class="btn btn-error btn-lg w-full sm:w-auto">
                             VS Code Marketplace
                         </a>
                         <a href="https://open-vsx.org/extension/liteclienthq/liteclient" target="_blank"
-                            class="btn btn-outline btn-lg">
+                            class="btn btn-outline btn-lg w-full sm:w-auto">
                             Open VSX Registry
                         </a>
                     </div>
+
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-3 mt-6 text-sm text-base-content/70">
+                        <span class="badge badge-outline badge-error">Native VS Code UX</span>
+                        <span class="badge badge-outline">No accounts</span>
+                        <span class="badge badge-outline">Zero telemetry</span>
+                        <span class="badge badge-outline">Local-first storage</span>
+                    </div>
                 </div>
 
-                <div class="flex-1 hidden lg:flex justify-center">
-                    <div class="rounded-2xl border border-base-300 shadow-2xl overflow-hidden">
+                <div class="flex-1 w-full lg:flex justify-center">
+                    <div class="rounded-2xl border border-base-300 shadow-2xl overflow-hidden w-full max-w-2xl">
                         <img src="media/screenshot.png" alt="LiteClient Interface" class="w-full h-auto">
                     </div>
                 </div>
@@ -200,7 +311,7 @@
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl md:text-5xl font-black mb-12 text-center leading-tight">Why Developers Love
                     LiteClient</h2>
-                <div class="stats stats-vertical lg:stats-horizontal shadow-lg w-full bg-base-100">
+                <div class="stats stats-vertical lg:stats-horizontal shadow-lg w-full bg-base-100 overflow-hidden">
                     <div class="stat">
                         <div class="stat-figure text-error">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
@@ -244,6 +355,37 @@
 
         <div class="divider divider-error mx-auto max-w-6xl my-0"></div>
 
+        <section class="py-20 lg:py-24 bg-base-100">
+            <div class="container mx-auto px-4">
+                <div class="max-w-5xl mx-auto text-center mb-12">
+                    <h2 class="text-3xl md:text-5xl font-black leading-tight">A better Postman and Thunder Client alternative for VS Code</h2>
+                    <p class="text-base md:text-lg text-base-content/70 mt-4">LiteClient keeps API testing inside your editor, removes account friction, and gives you the features serious API workflows actually need.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                    <div class="card bg-base-100 border border-base-300">
+                        <div class="card-body">
+                            <h3 class="card-title text-xl">Built for VS Code</h3>
+                            <p class="text-base-content/70">Native panels, trees, themes, tabs, and shortcuts make LiteClient feel like part of your editor instead of a separate app squeezed inside it.</p>
+                        </div>
+                    </div>
+                    <div class="card bg-base-100 border border-base-300">
+                        <div class="card-body">
+                            <h3 class="card-title text-xl">Local-first by default</h3>
+                            <p class="text-base-content/70">No accounts, no telemetry, no forced sync. Keep collections, environments, cookies, and history on your machine or in workspace storage.</p>
+                        </div>
+                    </div>
+                    <div class="card bg-base-100 border border-base-300">
+                        <div class="card-body">
+                            <h3 class="card-title text-xl">Ready for real workflows</h3>
+                            <p class="text-base-content/70">Use collection runner, scripts, test assertions, OAuth 2.0, collection variables, and Postman import/export without leaving VS Code.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider divider-error mx-auto max-w-6xl my-0"></div>
+
         <!-- Getting Started Steps Section -->
         <section class="py-20 lg:py-28 bg-base-100">
             <div class="container mx-auto px-4">
@@ -272,6 +414,57 @@
                             </div>
                         </li>
                     </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider divider-error mx-auto max-w-6xl my-0"></div>
+
+        <section class="py-20 lg:py-24 bg-base-200">
+            <div class="container mx-auto px-4">
+                <div class="max-w-5xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-5xl font-black leading-tight">Learn LiteClient faster with the docs</h2>
+                        <p class="text-base md:text-lg text-base-content/70 mt-4">Clear links into installation, quickstart, OAuth, scripting, migration, and release updates help both users and search engines understand the product faster.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <a href="https://docs.liteclient.com/installation" class="card bg-base-100 border border-base-300 hover:border-error hover:shadow-lg transition-all">
+                            <div class="card-body">
+                                <h3 class="card-title text-lg">Installation Guide</h3>
+                                <p class="text-sm text-base-content/70">Install LiteClient from the VS Code Marketplace, Open VSX, or VSIX.</p>
+                            </div>
+                        </a>
+                        <a href="https://docs.liteclient.com/quickstart" class="card bg-base-100 border border-base-300 hover:border-error hover:shadow-lg transition-all">
+                            <div class="card-body">
+                                <h3 class="card-title text-lg">Quickstart</h3>
+                                <p class="text-sm text-base-content/70">Send your first request, set up environments, and organize collections.</p>
+                            </div>
+                        </a>
+                        <a href="https://docs.liteclient.com/guides/oauth" class="card bg-base-100 border border-base-300 hover:border-error hover:shadow-lg transition-all">
+                            <div class="card-body">
+                                <h3 class="card-title text-lg">OAuth 2.0 Guide</h3>
+                                <p class="text-sm text-base-content/70">Configure Auth Code, PKCE, and Client Credentials flows inside LiteClient.</p>
+                            </div>
+                        </a>
+                        <a href="https://docs.liteclient.com/reference/scripting-api" class="card bg-base-100 border border-base-300 hover:border-error hover:shadow-lg transition-all">
+                            <div class="card-body">
+                                <h3 class="card-title text-lg">Scripting API</h3>
+                                <p class="text-sm text-base-content/70">Use the Postman-compatible `pm` API for pre-request and post-response automation.</p>
+                            </div>
+                        </a>
+                        <a href="https://docs.liteclient.com/guides/postman-migration" class="card bg-base-100 border border-base-300 hover:border-error hover:shadow-lg transition-all">
+                            <div class="card-body">
+                                <h3 class="card-title text-lg">Postman Migration</h3>
+                                <p class="text-sm text-base-content/70">Move existing Postman collections, auth, variables, and scripts into LiteClient.</p>
+                            </div>
+                        </a>
+                        <a href="https://docs.liteclient.com/community/changelog" class="card bg-base-100 border border-base-300 hover:border-error hover:shadow-lg transition-all">
+                            <div class="card-body">
+                                <h3 class="card-title text-lg">Changelog</h3>
+                                <p class="text-sm text-base-content/70">Track new releases, shipped features, and product improvements over time.</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -352,6 +545,14 @@
                     <div
                         class="card bg-gradient-to-br from-base-100 to-base-200 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all">
                         <div class="card-body items-center text-center gap-4">
+                            <h3 class="card-title text-lg">Collection Runner</h3>
+                            <p class="text-sm text-base-content/70">Run collections and folders with real-time
+                                progress, results, and per-request drill-downs</p>
+                        </div>
+                    </div>
+                    <div
+                        class="card bg-gradient-to-br from-base-100 to-base-200 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all">
+                        <div class="card-body items-center text-center gap-4">
                             <h3 class="card-title text-lg">Scripts & Tests</h3>
                             <p class="text-sm text-base-content/70">Run pre-request and post-response scripts with a
                                 Postman-style `pm` API and built-in test reporting</p>
@@ -410,9 +611,9 @@
                     <div
                         class="card bg-gradient-to-br from-base-100 to-base-200 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all">
                         <div class="card-body items-center text-center gap-4">
-                            <h3 class="card-title text-lg">Cookies & History</h3>
+                            <h3 class="card-title text-lg">Cookies & Run History</h3>
                             <p class="text-sm text-base-content/70">Persist per-domain cookies and keep an immutable
-                                execution ledger for replay and debugging</p>
+                                execution ledger for replay, debugging, and runner output</p>
                         </div>
                     </div>
                     <div
@@ -427,9 +628,52 @@
             </div>
         </section>
 
+        <div class="divider divider-error mx-auto max-w-6xl my-0"></div>
 
-        <footer class="footer footer-horizontal bg-base-200 text-base-content p-8 gap-8">
-            <aside class="flex flex-col gap-2 flex-1">
+        <section class="py-20 lg:py-24 bg-base-100">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-5xl font-black leading-tight">Frequently asked questions</h2>
+                        <p class="text-base md:text-lg text-base-content/70 mt-4">Clear answers for the product and comparison questions people search most often.</p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="collapse collapse-plus bg-base-200 border border-base-300">
+                            <input type="radio" name="faq-accordion" checked="checked" />
+                            <div class="collapse-title text-lg font-bold">Is LiteClient a Postman alternative for VS Code?</div>
+                            <div class="collapse-content text-base-content/70">
+                                LiteClient is a local-first REST API client for VS Code with collections, environments, scripts, tests, OAuth 2.0, cookies, history, and Postman collection import/export.
+                            </div>
+                        </div>
+                        <div class="collapse collapse-plus bg-base-200 border border-base-300">
+                            <input type="radio" name="faq-accordion" />
+                            <div class="collapse-title text-lg font-bold">Is LiteClient also a Thunder Client alternative?</div>
+                            <div class="collapse-content text-base-content/70">
+                                Yes. LiteClient is built for developers who want a native VS Code workflow with stronger testing, scripting, collection runner support, and local-first storage.
+                            </div>
+                        </div>
+                        <div class="collapse collapse-plus bg-base-200 border border-base-300">
+                            <input type="radio" name="faq-accordion" />
+                            <div class="collapse-title text-lg font-bold">Does LiteClient store API data locally?</div>
+                            <div class="collapse-content text-base-content/70">
+                                Yes. LiteClient keeps your collections, environments, cookies, and history on your machine, with optional workspace storage in a `.liteclient/` folder.
+                            </div>
+                        </div>
+                        <div class="collapse collapse-plus bg-base-200 border border-base-300">
+                            <input type="radio" name="faq-accordion" />
+                            <div class="collapse-title text-lg font-bold">Can LiteClient import Postman collections and scripts?</div>
+                            <div class="collapse-content text-base-content/70">
+                                Yes. LiteClient supports Postman Collection v2.1 import/export, including requests, authentication, variables, and request-level scripts.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer class="footer footer-vertical lg:footer-horizontal bg-base-200 text-base-content p-6 sm:p-8 gap-8">
+            <aside class="flex flex-col gap-2 flex-1 text-center lg:text-left">
                 <div class="flex items-center gap-2">
                     <img src="media/logo.png" alt="LiteClient Logo" width="32" height="32" class="rounded-full">
                     <h3 class="font-black text-base">LiteClient</h3>
@@ -437,17 +681,19 @@
                 <p class="text-sm text-base-content/70">Fast • Private • Native</p>
                 <p class="text-xs text-base-content/60">The fastest REST API client for modern code editors.</p>
             </aside>
-            <nav>
+            <nav class="text-center lg:text-left">
                 <h6 class="footer-title">Quick Links</h6>
                 <a href="https://docs.liteclient.com/" class="link link-hover text-sm">Documentation</a>
                 <a href="https://github.com/liteclienthq/liteclient" target="_blank"
                     class="link link-hover text-sm">GitHub Repository</a>
+                <a href="https://github.com/liteclienthq/liteclient/releases" target="_blank"
+                    class="link link-hover text-sm">Release Notes</a>
                 <a href="https://github.com/liteclienthq/liteclient/issues" target="_blank"
                     class="link link-hover text-sm">Support & Issues</a>
                 <a href="https://github.com/liteclienthq/liteclient/blob/main/CHANGELOG.md" target="_blank"
                     class="link link-hover text-sm">Changelog</a>
             </nav>
-            <nav>
+            <nav class="text-center lg:text-left">
                 <h6 class="footer-title">Resources</h6>
                 <a href="https://marketplace.visualstudio.com/items?itemName=liteclienthq.liteclient" target="_blank"
                     class="link link-hover text-sm">VS Code Marketplace</a>
@@ -456,7 +702,7 @@
                 <a href="https://github.com/liteclienthq" target="_blank" class="link link-hover text-sm">GitHub
                     Organization</a>
             </nav>
-            <aside class="text-right">
+            <aside class="text-center lg:text-right">
                 <p class="text-sm text-base-content/70 font-semibold">Built with care</p>
                 <p class="text-xs text-base-content/60">© 2026 LiteClient</p>
                 <p class="text-xs text-base-content/60 mt-1">No accounts • No bloat • Zero telemetry</p>

@@ -1,26 +1,30 @@
-const themeController = document.querySelector('.theme-controller');
+const themeControllers = document.querySelectorAll('.theme-controller');
 
 // Restore checkbox state after page loads
 document.addEventListener('DOMContentLoaded', () => {
     const currentTheme = document.documentElement.getAttribute('data-theme');
-    if (themeController) {
-        themeController.checked = currentTheme === 'dark';
-    }
+    themeControllers.forEach((controller) => {
+        controller.checked = currentTheme === 'dark';
+    });
 });
 
 // Listen for checkbox changes and update theme
-if (themeController) {
-    themeController.addEventListener('change', () => {
-        const newTheme = themeController.checked ? 'dark' : 'light';
+themeControllers.forEach((controller) => {
+    controller.addEventListener('change', () => {
+        const newTheme = controller.checked ? 'dark' : 'light';
         document.documentElement.setAttribute('data-theme', newTheme);
-        
+
         // Force Tailwind to reprocess styles
         document.documentElement.style.colorScheme = newTheme;
-        
+
+        themeControllers.forEach((toggle) => {
+            toggle.checked = newTheme === 'dark';
+        });
+
         localStorage.setItem('theme', newTheme);
         console.log('Theme changed to:', newTheme);
     });
-}
+});
 
 // Prevent zoom on input focus on mobile
 if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
@@ -37,4 +41,3 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.style.touchAction = 'manipulation';
     }
 });
-

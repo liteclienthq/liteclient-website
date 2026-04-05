@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="LiteClient">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="theme-color" content="#ffffff">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -24,6 +26,7 @@
     <meta property="og:description"
         content="Native REST API client for VS Code and a Postman and Thunder Client alternative with collection runner, scripts, tests, collection variables, OAuth 2.0, cookies, and Postman import/export.">
     <meta property="og:image" content="media/screenshot.png">
+    <meta property="og:locale" content="en_US">
     <meta property="og:url" content="https://liteclient.com/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="LiteClient">
@@ -268,7 +271,7 @@
     </nav>
 
     <main>
-        <section class="hero min-h-screen bg-base-100">
+        <section class="hero min-h-[70vh] bg-base-100">
             <div class="hero-content w-full max-w-6xl px-4 py-12 sm:py-16 flex-col lg:flex-row gap-10 lg:gap-12">
                 <div class="flex flex-col justify-center flex-1 text-center lg:text-left">
                     <div class="badge badge-lg mb-4 w-fit self-center lg:self-start">Now shipping v0.19.4</div>
@@ -281,12 +284,15 @@
 
                     <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                         <a href="https://marketplace.visualstudio.com/items?itemName=liteclienthq.liteclient"
-                            target="_blank" class="btn btn-error btn-lg w-full sm:w-auto">
-                            VS Code Marketplace
+                            target="_blank" class="btn btn-error btn-lg w-full sm:w-auto gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.613 11.547l-8.08-6.963c-.336-.29-.806-.29-1.143 0l-8.08 6.963c-.504.435-.504 1.193 0 1.629l8.08 6.963c.336.29.806.29 1.143 0l8.08-6.963c.504-.436.504-1.194 0-1.629M21.296 12.85l-7.362 6.34-7.362-6.34"/>
+                            </svg>
+                            Install in VS Code
                         </a>
                         <a href="https://open-vsx.org/extension/liteclienthq/liteclient" target="_blank"
-                            class="btn btn-outline btn-lg w-full sm:w-auto">
-                            Open VSX Registry
+                            class="btn btn-ghost btn-lg w-full sm:w-auto">
+                            Open VSX
                         </a>
                     </div>
 
@@ -299,8 +305,8 @@
                 </div>
 
                 <div class="flex-1 w-full lg:flex justify-center">
-                    <div class="rounded-2xl border border-base-300 shadow-2xl overflow-hidden w-full max-w-2xl">
-                        <img src="media/screenshot.png" alt="LiteClient Interface" class="w-full h-auto">
+                    <div class="rounded-2xl border border-base-300 shadow-2xl overflow-hidden w-full max-w-2xl bg-base-200">
+                        <img src="media/screenshot.png" alt="LiteClient Interface" class="w-full h-auto" width="800" height="600" loading="eager" decoding="async">
                     </div>
                 </div>
             </div>
@@ -367,7 +373,7 @@
                         need.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                    <div class="card bg-base-100 border border-base-300">
+                    <div class="card bg-base-100 border-2 border-base-300">
                         <div class="card-body">
                             <h3 class="card-title text-xl">Built for VS Code</h3>
                             <p class="text-base-content/70">Native panels, trees, themes, tabs, and shortcuts make
@@ -375,14 +381,14 @@
                             </p>
                         </div>
                     </div>
-                    <div class="card bg-base-100 border border-base-300">
+                    <div class="card bg-base-100 border-2 border-base-300">
                         <div class="card-body">
                             <h3 class="card-title text-xl">Local-first by default</h3>
                             <p class="text-base-content/70">No accounts, no telemetry, no forced sync. Keep collections,
                                 environments, cookies, and history on your machine or in workspace storage.</p>
                         </div>
                     </div>
-                    <div class="card bg-base-100 border border-base-300">
+                    <div class="card bg-base-100 border-2 border-base-300">
                         <div class="card-body">
                             <h3 class="card-title text-xl">Ready for real workflows</h3>
                             <p class="text-base-content/70">Use collection runner, scripts, test assertions, OAuth 2.0,
@@ -441,7 +447,7 @@
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         <a href="https://docs.liteclient.com/installation"
-                            class="card bg-base-100 border border-base-300 hover:border-error hover:shadow-lg transition-all">
+                            class="card bg-base-100 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all duration-300">
                             <div class="card-body">
                                 <h3 class="card-title text-lg">Installation Guide</h3>
                                 <p class="text-sm text-base-content/70">Install LiteClient from the VS Code Marketplace,
@@ -449,7 +455,7 @@
                             </div>
                         </a>
                         <a href="https://docs.liteclient.com/quickstart"
-                            class="card bg-base-100 border border-base-300 hover:border-error hover:shadow-lg transition-all">
+                            class="card bg-base-100 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all duration-300">
                             <div class="card-body">
                                 <h3 class="card-title text-lg">Quickstart</h3>
                                 <p class="text-sm text-base-content/70">Send your first request, set up environments,
@@ -457,7 +463,7 @@
                             </div>
                         </a>
                         <a href="https://docs.liteclient.com/guides/oauth"
-                            class="card bg-base-100 border border-base-300 hover:border-error hover:shadow-lg transition-all">
+                            class="card bg-base-100 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all duration-300">
                             <div class="card-body">
                                 <h3 class="card-title text-lg">OAuth 2.0 Guide</h3>
                                 <p class="text-sm text-base-content/70">Configure Auth Code, PKCE, and Client
@@ -465,7 +471,7 @@
                             </div>
                         </a>
                         <a href="https://docs.liteclient.com/reference/scripting-api"
-                            class="card bg-base-100 border border-base-300 hover:border-error hover:shadow-lg transition-all">
+                            class="card bg-base-100 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all duration-300">
                             <div class="card-body">
                                 <h3 class="card-title text-lg">Scripting API</h3>
                                 <p class="text-sm text-base-content/70">Use the Postman-compatible `pm` API for
@@ -473,7 +479,7 @@
                             </div>
                         </a>
                         <a href="https://docs.liteclient.com/guides/postman-migration"
-                            class="card bg-base-100 border border-base-300 hover:border-error hover:shadow-lg transition-all">
+                            class="card bg-base-100 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all duration-300">
                             <div class="card-body">
                                 <h3 class="card-title text-lg">Postman Migration</h3>
                                 <p class="text-sm text-base-content/70">Move existing Postman collections, auth,
@@ -481,7 +487,7 @@
                             </div>
                         </a>
                         <a href="https://docs.liteclient.com/community/changelog"
-                            class="card bg-base-100 border border-base-300 hover:border-error hover:shadow-lg transition-all">
+                            class="card bg-base-100 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all duration-300">
                             <div class="card-body">
                                 <h3 class="card-title text-lg">Changelog</h3>
                                 <p class="text-sm text-base-content/70">Track new releases, shipped features, and
@@ -499,7 +505,7 @@
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div
-                        class="card bg-base-100 border border-base-300 hover:border-error hover:shadow-lg transition-all">
+                        class="card bg-base-100 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all duration-300">
                         <div class="card-body">
                             <div class="text-4xl mb-4 text-error">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
@@ -516,7 +522,7 @@
                         </div>
                     </div>
                     <div
-                        class="card bg-base-100 border border-base-300 hover:border-error hover:shadow-lg transition-all">
+                        class="card bg-base-100 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all duration-300">
                         <div class="card-body">
                             <div class="text-4xl mb-4 text-error">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
@@ -534,7 +540,7 @@
                         </div>
                     </div>
                     <div
-                        class="card bg-base-100 border border-base-300 hover:border-error hover:shadow-lg transition-all">
+                        class="card bg-base-100 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all duration-300">
                         <div class="card-body">
                             <div class="text-4xl mb-4 text-error">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
@@ -567,7 +573,7 @@
                         class="text-base-content/60">nothing you don't.</span></h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
                     <div
-                        class="card bg-gradient-to-br from-base-100 to-base-200 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all">
+                        class="card bg-base-100 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all duration-300">
                         <div class="card-body items-center text-center gap-4">
                             <h3 class="card-title text-lg">Collection Runner</h3>
                             <p class="text-sm text-base-content/70">Run collections and folders with real-time
@@ -575,7 +581,7 @@
                         </div>
                     </div>
                     <div
-                        class="card bg-gradient-to-br from-base-100 to-base-200 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all">
+                        class="card bg-base-100 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all duration-300">
                         <div class="card-body items-center text-center gap-4">
                             <h3 class="card-title text-lg">Scripts & Tests</h3>
                             <p class="text-sm text-base-content/70">Run pre-request and post-response scripts with a
@@ -583,7 +589,7 @@
                         </div>
                     </div>
                     <div
-                        class="card bg-gradient-to-br from-base-100 to-base-200 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all">
+                        class="card bg-base-100 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all duration-300">
                         <div class="card-body items-center text-center gap-4">
                             <h3 class="card-title text-lg">Environment Manager</h3>
                             <p class="text-sm text-base-content/70">Manage initial values, current values, secrets,
@@ -591,7 +597,7 @@
                         </div>
                     </div>
                     <div
-                        class="card bg-gradient-to-br from-base-100 to-base-200 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all">
+                        class="card bg-base-100 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all duration-300">
                         <div class="card-body items-center text-center gap-4">
                             <h3 class="card-title text-lg">Collection Variables</h3>
                             <p class="text-sm text-base-content/70">Use collection-scoped variables with autocomplete,
@@ -600,7 +606,7 @@
                         </div>
                     </div>
                     <div
-                        class="card bg-gradient-to-br from-base-100 to-base-200 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all">
+                        class="card bg-base-100 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all duration-300">
                         <div class="card-body items-center text-center gap-4">
                             <h3 class="card-title text-lg">Response Formatting</h3>
                             <p class="text-sm text-base-content/70">Pretty-print JSON, HTML, and XML responses
@@ -608,7 +614,7 @@
                         </div>
                     </div>
                     <div
-                        class="card bg-gradient-to-br from-base-100 to-base-200 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all">
+                        class="card bg-base-100 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all duration-300">
                         <div class="card-body items-center text-center gap-4">
                             <h3 class="card-title text-lg">OAuth 2.0 & PKCE</h3>
                             <p class="text-sm text-base-content/70">Support for Auth Code, PKCE, and Client
@@ -617,7 +623,7 @@
                         </div>
                     </div>
                     <div
-                        class="card bg-gradient-to-br from-base-100 to-base-200 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all">
+                        class="card bg-base-100 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all duration-300">
                         <div class="card-body items-center text-center gap-4">
                             <h3 class="card-title text-lg">Workspace Storage</h3>
                             <p class="text-sm text-base-content/70">Store collections, environments, and history in
@@ -625,7 +631,7 @@
                         </div>
                     </div>
                     <div
-                        class="card bg-gradient-to-br from-base-100 to-base-200 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all">
+                        class="card bg-base-100 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all duration-300">
                         <div class="card-body items-center text-center gap-4">
                             <h3 class="card-title text-lg">Variable Autocomplete</h3>
                             <p class="text-sm text-base-content/70">Trigger suggestions with `{{` in URLs, headers,
@@ -633,7 +639,7 @@
                         </div>
                     </div>
                     <div
-                        class="card bg-gradient-to-br from-base-100 to-base-200 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all">
+                        class="card bg-base-100 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all duration-300">
                         <div class="card-body items-center text-center gap-4">
                             <h3 class="card-title text-lg">Cookies & Run History</h3>
                             <p class="text-sm text-base-content/70">Persist per-domain cookies and keep an immutable
@@ -641,7 +647,7 @@
                         </div>
                     </div>
                     <div
-                        class="card bg-gradient-to-br from-base-100 to-base-200 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all">
+                        class="card bg-base-100 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all duration-300">
                         <div class="card-body items-center text-center gap-4">
                             <h3 class="card-title text-lg">Postman Import/Export</h3>
                             <p class="text-sm text-base-content/70">Bring over requests, auth, variables, and scripts
@@ -649,7 +655,7 @@
                         </div>
                     </div>
                     <div
-                        class="card bg-gradient-to-br from-base-100 to-base-200 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all">
+                        class="card bg-base-100 border-2 border-base-300 hover:border-error hover:shadow-lg transition-all duration-300">
                         <div class="card-body items-center text-center gap-4">
                             <h3 class="card-title text-lg">Multi-File Requests</h3>
                             <p class="text-sm text-base-content/70">Create standalone `.lcreq` request files, open
@@ -672,7 +678,7 @@
                     </div>
                     <div class="space-y-4">
                         <div class="collapse collapse-plus bg-base-200 border border-base-300">
-                            <input type="radio" name="faq-accordion" checked="checked" />
+                            <input type="checkbox" name="faq-accordion" />
                             <div class="collapse-title text-lg font-bold">Is LiteClient a Postman alternative for VS
                                 Code?</div>
                             <div class="collapse-content text-base-content/70">
@@ -681,7 +687,7 @@
                             </div>
                         </div>
                         <div class="collapse collapse-plus bg-base-200 border border-base-300">
-                            <input type="radio" name="faq-accordion" />
+                            <input type="checkbox" name="faq-accordion" />
                             <div class="collapse-title text-lg font-bold">Is LiteClient also a Thunder Client
                                 alternative?</div>
                             <div class="collapse-content text-base-content/70">
@@ -690,7 +696,7 @@
                             </div>
                         </div>
                         <div class="collapse collapse-plus bg-base-200 border border-base-300">
-                            <input type="radio" name="faq-accordion" />
+                            <input type="checkbox" name="faq-accordion" />
                             <div class="collapse-title text-lg font-bold">Does LiteClient store API data locally?</div>
                             <div class="collapse-content text-base-content/70">
                                 Yes. LiteClient keeps your collections, environments, cookies, and history on your
@@ -698,7 +704,7 @@
                             </div>
                         </div>
                         <div class="collapse collapse-plus bg-base-200 border border-base-300">
-                            <input type="radio" name="faq-accordion" />
+                            <input type="checkbox" name="faq-accordion" />
                             <div class="collapse-title text-lg font-bold">Can LiteClient import Postman collections and
                                 scripts?</div>
                             <div class="collapse-content text-base-content/70">
